@@ -23,39 +23,39 @@ const Footer = () => {
   ];
 
   return (
-    <footer className=" bg-gray-900 text-white">
-      <div className="relative w-full h-full">
-        {/* Dark overlay for map */}
-        <div className="absolute inset-0 bg-gray-900/90" />
-        
-        <div className="relative max-w-7xl mx-auto px-8 py-6 flex flex-col lg:flex-row justify-between items-start gap-8">
-          {/* Contact Info */}
-          <div className="space-y-4">
-            <div className="flex items-center gap-2">
-              <MapPin className="w-5 h-5 text-red-500" />
-              <div>
-                <p>3110 Spring Glenn Rd</p>
-                <p>Jacksonville, FL 32207</p>
-              </div>
+    <footer className="bg-gray-900 text-white">
+      <div className="max-w-7xl mx-auto px-8 py-6">
+        <div className="flex flex-col lg:flex-row gap-8">
+          {/* Map and Contact Info Container */}
+          <div className="flex flex-col lg:flex-row gap-24 lg:w-1/2">
+            {/* Map */}
+            <div className="w-full lg:w-64 h-48">
+              <MapComponent />
             </div>
-            <div className="flex items-center gap-2">
-              <Phone className="w-5 h-5 text-red-500" />
-              <div>
-                <p>(904) 725-9980</p>
-                <p>(904) 733-4547</p>
-              </div>
-            </div>
-          </div>
 
-          {/* Map */}
-          <div className="absolute top-0 left-0 w-full h-full z-10 opacity-30">
-            <MapComponent />
+            {/* Contact Info */}
+            <div className="space-y-4">
+              <div className="flex items-center gap-2">
+                <MapPin className="w-5 h-5 text-red-500" />
+                <div>
+                  <p>3110 Spring Glenn Rd</p>
+                  <p>Jacksonville, FL 32207</p>
+                </div>
+              </div>
+              <div className="flex items-center gap-2">
+                <Phone className="w-5 h-5 text-red-500" />
+                <div>
+                  <p>(904) 725-9980</p>
+                  <p>(904) 733-4547</p>
+                </div>
+              </div>
+            </div>
           </div>
 
           {/* Hours */}
-          <div className="flex flex-col md:flex-row gap-8 lg:gap-16">
+          <div className="flex flex-col md:flex-row gap-8 lg:gap-16 lg:w-1/2">
             {/* Tax Season Hours */}
-            <div className="min-w-[200px]">
+            <div className="flex-1">
               <h3 className="font-semibold mb-4">Tax Season Hours</h3>
               <div className="space-y-2">
                 {taxSeasonHours.map((item) => (
@@ -68,7 +68,7 @@ const Footer = () => {
             </div>
 
             {/* Non-Tax Season Hours */}
-            <div className="min-w-[200px]">
+            <div className="flex-1">
               <h3 className="font-semibold mb-4">Non-Tax Season Hours</h3>
               <div className="space-y-2">
                 {nonTaxSeasonHours.map((item) => (
@@ -79,6 +79,17 @@ const Footer = () => {
                 ))}
               </div>
             </div>
+          </div>
+        </div>
+
+        {/* Copyright and Moniker */}
+        <div className="mt-8 pt-4 border-t border-gray-800 flex justify-between items-center">
+          <div className="w-24">{/* Empty div for spacing */}</div>
+          <div className="text-center text-sm text-gray-400">
+            © {new Date().getFullYear()} All Rights Reserved
+          </div>
+          <div className="text-sm text-gray-400">
+            Built by MJF
           </div>
         </div>
       </div>
