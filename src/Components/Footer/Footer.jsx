@@ -3,21 +3,21 @@ import MapComponent from "../MapComp/Map";
 
 const Footer = () => {
   const taxSeasonHours = [
-    { day: 'Monday', hours: '8:00am - 10:00pm' },
-    { day: 'Tuesday', hours: '8:00am - 10:00pm' },
-    { day: 'Wednesday', hours: '8:00am - 7:00pm' },
-    { day: 'Thursday', hours: '8:00am - 10:00pm' },
-    { day: 'Friday', hours: '8:00am - 10:00pm' },
-    { day: 'Saturday', hours: '10:00am - 10:00pm' },
-    { day: 'Sunday', hours: '10:00am - 10:00pm' }
+    { day: 'Monday', hours: '9:00am - 8:00pm' },
+    { day: 'Tuesday', hours: '9:00am - 8:00pm' },
+    { day: 'Wednesday', hours: '9:00am - 8:00pm' },
+    { day: 'Thursday', hours: '9:00am - 8:00pm' },
+    { day: 'Friday', hours: '9:00am - 8:00pm' },
+    { day: 'Saturday', hours: '9:00am - 8:00pm' },
+    { day: 'Sunday', hours: '9:00am - 8:00pm' }
   ];
 
   const nonTaxSeasonHours = [
-    { day: 'Monday', hours: '8:00am - 10:00pm' },
-    { day: 'Tuesday', hours: '8:00am - 10:00pm' },
-    { day: 'Wednesday', hours: '8:00am - 6:00pm' },
-    { day: 'Thursday', hours: '8:00am - 10:00pm' },
-    { day: 'Friday', hours: '8:00am - 6:00pm' },
+    { day: 'Monday', hours: '9:00am - 6:00pm' },
+    { day: 'Tuesday', hours: '9:00am - 6:00pm' },
+    { day: 'Wednesday', hours: '9:00am - 6:00pm' },
+    { day: 'Thursday', hours: '9:00am - 6:00pm' },
+    { day: 'Friday', hours: '9:00am - 6:00pm' },
     { day: 'Saturday', hours: 'CLOSED' },
     { day: 'Sunday', hours: 'CLOSED' }
   ];
@@ -45,8 +45,8 @@ const Footer = () => {
               <div className="flex items-center gap-2">
                 <Phone className="w-5 h-5 text-red-500" />
                 <div>
-                  <p>(904) 725-9980</p>
-                  <p>(904) 733-4547</p>
+                  <p>(904) 396-6777</p>
+                  <p>(904) 333-5159</p>
                 </div>
               </div>
             </div>
