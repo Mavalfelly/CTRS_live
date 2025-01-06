@@ -17,8 +17,14 @@ export const ContactUs = ({ position }) => {
         );
     };
   
-    // Using template literal for className concatenation
-    const containerClasses = `w-full flex ${position === 'left' ? 'justify-start' : 'justify-end'}`;
+    // Updated containerClasses logic to handle center position
+    const containerClasses = `w-full flex ${
+      position === 'left' 
+        ? 'justify-start' 
+        : position === 'center'
+          ? 'justify-center'
+          : 'justify-end'
+    }`;
   
     return (
       <div className={containerClasses}>
