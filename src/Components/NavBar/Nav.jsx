@@ -25,13 +25,13 @@ const NavBar = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            <Link to="/" className="text-gray-600 hover:text-gray-900 px-3 py-2 text-sm font-medium transition-colors">
+            <Link to="/" className="text-gray-600 hover:text-gray-900 px-3 py-2 text-m font-medium transition-colors">
               Home
             </Link>
-            <Link to="/about" className="text-gray-600 hover:text-gray-900 px-3 py-2 text-sm font-medium transition-colors">
+            <Link to="/about" className="text-gray-600 hover:text-gray-900 px-3 py-2 text-m font-medium transition-colors">
               About
             </Link>
-            <Link to="/contact" className="text-gray-600 hover:text-gray-900 px-3 py-2 text-sm font-medium transition-colors">
+            <Link to="/contact" className="text-gray-600 hover:text-gray-900 px-3 py-2 text-m font-medium transition-colors">
               Contact
             </Link>
             {/* Services Dropdown */}
@@ -45,7 +45,7 @@ const NavBar = () => {
                 dropdownTimeout = setTimeout(() => setIsDropdownOpen(false), 200);
               }}
             >
-              <button className="flex items-center text-gray-600 hover:text-gray-900 px-3 py-2 text-sm font-medium transition-colors">
+              <button className="flex items-center text-gray-600 hover:text-gray-900 px-3 py-2 text-m font-medium transition-colors">
                 Services
                 <ChevronDown className="ml-1 h-4 w-4" />
               </button>
@@ -56,7 +56,7 @@ const NavBar = () => {
                   <div className="py-1">
                     <Link
                       to="/personal_taxes"
-                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-colors"
+                      className="block px-4 py-2 text-m text-gray-700 hover:bg-gray-100 transition-colors"
                     >
                       Personal Taxes
                     </Link>
@@ -64,7 +64,7 @@ const NavBar = () => {
                   <div className="py-1">
                     <Link
                       to="/business_taxes"
-                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-colors"
+                      className="block px-4 py-2 text-m text-gray-700 hover:bg-gray-100 transition-colors"
                     >
                       Business Taxes
                     </Link>
@@ -72,7 +72,7 @@ const NavBar = () => {
                   <div className="py-1">
                     <Link
                       to="/bookkeeping"
-                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-colors"
+                      className="block px-4 py-2 text-m text-gray-700 hover:bg-gray-100 transition-colors"
                     >
                       Bookkeeping
                     </Link>
@@ -80,7 +80,7 @@ const NavBar = () => {
                   <div className="py-1">
                     <Link
                       to="/inc_services"
-                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-colors"
+                      className="block px-4 py-2 text-m text-gray-700 hover:bg-gray-100 transition-colors"
                     >
                       Incorperation Services
                     </Link>
@@ -88,7 +88,7 @@ const NavBar = () => {
                   <div className="py-1">
                     <Link
                       to="/irs_rep"
-                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-colors"
+                      className="block px-4 py-2 text-m text-gray-700 hover:bg-gray-100 transition-colors"
                     >
                       IRS Representation
                     </Link>
@@ -97,7 +97,7 @@ const NavBar = () => {
                 
               )}
             </div>
-            <Link to="/resources" className="text-gray-600 hover:text-gray-900 px-3 py-2 text-sm font-medium transition-colors">
+            <Link to="/resources" className="text-gray-600 hover:text-gray-900 px-3 py-2 text-m font-medium transition-colors">
               Resources
             </Link>
           </div>

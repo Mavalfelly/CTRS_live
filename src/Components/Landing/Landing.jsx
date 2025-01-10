@@ -26,7 +26,10 @@ const Landing = () => {
 
             {/* Hero Content */}
             <div className="relative z-20 text-center text-white px-4 max-w-4xl mx-auto">
-              <h1 className="text-5xl font-bold mb-6 leading-tight tracking-tight drop-shadow-lg">
+            <h1 className="text-5xl font-bold mb-6 leading-tight tracking-tight drop-shadow-lg">
+                Welcome to College Tax and Retirement Stratagies
+              </h1>
+              <h1 className="text-3xl font-bold mb-6 leading-tight tracking-tight drop-shadow-lg">
                 Jacksonville's Best Tax Preperation and Bookkeeping Firm
               </h1>
               <h2 className="text-3xl font-medium mb-4 drop-shadow-lg bg-black/30 inline-block px-6 py-2 rounded-full">
@@ -53,24 +56,23 @@ const Landing = () => {
               id="Mission"
               className="text-center max-w-4xl mx-auto px-4 py-16 text-gray-700"
             >
-              <div className="bg-gray-50 p-8 rounded-md shadow-md">
-                <h2 className="text-2xl font-semibold mb-4">Our Mission</h2>
-                <p className="text-base leading-relaxed">
-                  For more than 27 years, Lyuba and her dedicated team have proudly
-                  served the Jacksonville community with expert tax
-                  preparation services. With a commitment to accuracy, professionalism,
-                  and personalized care, we handle everything from simple tax filings to
-                  intricate financial matters. No matter how straightforward or complex
-                  your needs may be, you can trust us to provide reliable solutions
-                  tailored to your unique situation.
-                  <br />
-                  <span className="text-blue-600 font-bold hover:text-blue-800">
-                    Let us help you achieve financial peace of mind!
-                  </span>
-                </p>
-              </div>
+              <h2 className="text-3xl font-semibold mb-4">Our Mission</h2>
+              <hr className="border-black mb-5"/>
+              <p className="text-l font-semibold leading-relaxed">
+                For more than 27 years, Lyuba and her dedicated team have proudly
+                served the Jacksonville community with expert tax
+                preparation services. With a commitment to accuracy, professionalism,
+                and personalized care, we handle everything from simple tax filings to
+                intricate financial matters. No matter how straightforward or complex
+                your needs may be, you can trust us to provide reliable solutions
+                tailored to your unique situation.
+                <br />
+                <span className="text-blue-600 font-bold hover:text-blue-800">
+                  Let us help you achieve financial peace of mind!
+                </span>
+              </p>
             </section>
-      
+
             {/* Services Section */}
             <section id="servs" className="py-12">
               <div className="max-w-7xl mx-auto px-6">
@@ -79,7 +81,7 @@ const Landing = () => {
                 </h2>
                 <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
                   {/* Personal Taxes */}
-                  <div className="text-center bg-white p-6 shadow-md rounded-lg">
+                  <div className="text-center bg-white p-6 shadow-md rounded-lg transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
                     <div className="flex justify-center mb-4">
                       <div className="bg-blue-600 text-white w-12 h-12 flex items-center justify-center rounded-full">
                         <i className="fas fa-dollar-sign"></i>
@@ -96,9 +98,9 @@ const Landing = () => {
                       Learn More
                     </Link>
                   </div>
-      
+
                   {/* Business Taxes */}
-                  <div className="text-center bg-white p-6 shadow-md rounded-lg">
+                  <div className="text-center bg-white p-6 shadow-md rounded-lg transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
                     <div className="flex justify-center mb-4">
                       <div className="bg-blue-600 text-white w-12 h-12 flex items-center justify-center rounded-full">
                         <i className="fas fa-briefcase"></i>
@@ -115,9 +117,9 @@ const Landing = () => {
                       Learn More
                     </Link>
                   </div>
-      
+
                   {/* Bookkeeping */}
-                  <div className="text-center bg-white p-6 shadow-md rounded-lg">
+                  <div className="text-center bg-white p-6 shadow-md rounded-lg transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
                     <div className="flex justify-center mb-4">
                       <div className="bg-blue-600 text-white w-12 h-12 flex items-center justify-center rounded-full">
                         <i className="fas fa-chart-line"></i>
@@ -134,9 +136,9 @@ const Landing = () => {
                       Learn More
                     </Link>
                   </div>
-      
+
                   {/* Incorporation Services */}
-                  <div className="text-center bg-white p-6 shadow-md rounded-lg">
+                  <div className="text-center bg-white p-6 shadow-md rounded-lg transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
                     <div className="flex justify-center mb-4">
                       <div className="bg-blue-600 text-white w-12 h-12 flex items-center justify-center rounded-full">
                         <i className="fas fa-building"></i>
