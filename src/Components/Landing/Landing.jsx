@@ -1,5 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 
+import { Link } from "react-router-dom";
+
 const Landing = () => {
     return (
         <>
@@ -55,7 +57,7 @@ const Landing = () => {
                 <h2 className="text-2xl font-semibold mb-4">Our Mission</h2>
                 <p className="text-base leading-relaxed">
                   For more than 27 years, Lyuba and her dedicated team have proudly
-                  served the Jacksonville community with expert accounting and tax
+                  served the Jacksonville community with expert tax
                   preparation services. With a commitment to accuracy, professionalism,
                   and personalized care, we handle everything from simple tax filings to
                   intricate financial matters. No matter how straightforward or complex
@@ -90,9 +92,9 @@ const Landing = () => {
                       Year-round individual tax preparation, planning, and IRS notice
                       resolution. Fast, accurate, and efficient service.
                     </p>
-                    <a href="#" className="mt-4 inline-block text-blue-600 font-bold hover:underline">
+                    <Link to='personal_taxes' className="mt-4 inline-block text-blue-600 font-bold hover:underline">
                       Learn More
-                    </a>
+                    </Link>
                   </div>
       
                   {/* Business Taxes */}
@@ -109,9 +111,9 @@ const Landing = () => {
                       Corporate, partnership, and sole proprietor tax filings. We
                       handle Forms 1120, 1120S, 1065, and Schedule C.
                     </p>
-                    <a href="#" className="mt-4 inline-block text-blue-600 font-bold hover:underline">
+                    <Link to='business_taxes' className="mt-4 inline-block text-blue-600 font-bold hover:underline">
                       Learn More
-                    </a>
+                    </Link>
                   </div>
       
                   {/* Bookkeeping */}
@@ -128,9 +130,9 @@ const Landing = () => {
                       Comprehensive monthly, quarterly, and yearly bookkeeping
                       services to ease your business operations.
                     </p>
-                    <a href="#" className="mt-4 inline-block text-blue-600 font-bold hover:underline">
+                    <Link to='bookkeeping' className="mt-4 inline-block text-blue-600 font-bold hover:underline">
                       Learn More
-                    </a>
+                    </Link>
                   </div>
       
                   {/* Incorporation Services */}
@@ -147,9 +149,9 @@ const Landing = () => {
                       Setup your free initial consultation to form a new business,
                       whether it's a corporation or LLC.
                     </p>
-                    <a href="#" className="mt-4 inline-block text-blue-600 font-bold hover:underline">
+                    <Link to='inc_services' className="mt-4 inline-block text-blue-600 font-bold hover:underline">
                       Learn More
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>

@@ -14,8 +14,12 @@ const NavBar = () => {
         <div className="flex justify-between h-16">
           {/* Logo/Brand section */}
           <div className="flex items-center">
-            <Link to="/" className="text-xl font-bold text-gray-800 hover:text-gray-600 transition-colors">
-              Logo
+            <Link to="/">
+              <img 
+                src="/logo.png" 
+                alt="Company Logo" 
+                className="h-36 flex justify-center" // Adjust size as needed
+              />
             </Link>
           </div>
 
@@ -51,13 +55,46 @@ const NavBar = () => {
                 <div className="absolute left-0 mt-2 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 z-50">
                   <div className="py-1">
                     <Link
-                      to="/services/bookkeeping"
+                      to="/personal_taxes"
+                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-colors"
+                    >
+                      Personal Taxes
+                    </Link>
+                  </div>
+                  <div className="py-1">
+                    <Link
+                      to="/business_taxes"
+                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-colors"
+                    >
+                      Business Taxes
+                    </Link>
+                  </div>
+                  <div className="py-1">
+                    <Link
+                      to="/bookkeeping"
                       className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-colors"
                     >
                       Bookkeeping
                     </Link>
+                  </div> 
+                  <div className="py-1">
+                    <Link
+                      to="/inc_services"
+                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-colors"
+                    >
+                      Incorperation Services
+                    </Link>
+                  </div>
+                  <div className="py-1">
+                    <Link
+                      to="/irs_rep"
+                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-colors"
+                    >
+                      IRS Representation
+                    </Link>
                   </div>
                 </div>
+                
               )}
             </div>
             <Link to="/resources" className="text-gray-600 hover:text-gray-900 px-3 py-2 text-sm font-medium transition-colors">
@@ -100,17 +137,40 @@ const NavBar = () => {
           </Link>
           {/* Mobile Services Menu */}
           <div>
-            <Link
-              to="/services"
+            <div
               className="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-50 transition-colors"
             >
               Services
+            </div>
+            <Link
+              to="/personal_taxes"
+              className="block px-3 py-2 pl-6 rounded-md text-base font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-50 transition-colors"
+            >
+              - Personal Taxes
             </Link>
             <Link
-              to="/services/bookkeeping"
+              to="/business_taxes"
+              className="block px-3 py-2 pl-6 rounded-md text-base font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-50 transition-colors"
+            >
+              - Business Taxes
+            </Link>
+            <Link
+              to="/bookkeeping"
               className="block px-3 py-2 pl-6 rounded-md text-base font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-50 transition-colors"
             >
               - Bookkeeping
+            </Link>
+            <Link
+              to="/inc_services"
+              className="block px-3 py-2 pl-6 rounded-md text-base font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-50 transition-colors"
+            >
+              - Incorperation Services
+            </Link>
+            <Link
+              to="/irs_rep"
+              className="block px-3 py-2 pl-6 rounded-md text-base font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-50 transition-colors"
+            >
+              - IRS Representation
             </Link>
           </div>
           <Link
