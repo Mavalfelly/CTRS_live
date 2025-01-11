@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import { ExternalLink } from 'lucide-react';
-
+import PageHeader from '../PageHeader/PageHeader';
 const ResourceList = () => {
     const links = [
         {
@@ -139,7 +139,13 @@ const ResourceList = () => {
         </div>
     );
     return (
-        <div className="bg-gradient-to-b from-blue-50 to-white min-h-screen py-8">
+      <>
+        <PageHeader
+            title='Resources'
+            backgroundImage='/jax_back2.jpeg'
+            overlayOpacity='bg-black/40'
+        />
+          <div className="bg-gradient-to-b from-blue-50 to-white min-h-screen py-8">
             <div className="max-w-5xl mx-auto px-6">
                 <h1 className="text-3xl font-bold mb-8 text-blue-900">Blank Forms</h1>
                 <p className="text-lg text-blue-700 mb-6">Please print and fill out all applicable forms for the most streamlined process.</p>
@@ -156,6 +162,7 @@ const ResourceList = () => {
                 <LinkGroup />
             </div>
         </div>
+      </>
     );
     
 };

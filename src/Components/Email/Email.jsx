@@ -17,7 +17,6 @@ export const ContactUs = ({ position }) => {
         );
     };
   
-    // Updated containerClasses logic to handle center position
     const containerClasses = `w-full flex ${
       position === 'left' 
         ? 'justify-start' 
@@ -30,7 +29,7 @@ export const ContactUs = ({ position }) => {
       <div className={containerClasses}>
         <div className="w-full max-w-md">
           <div className="rounded-lg border border-gray-200 bg-white shadow-lg">
-            <div className="border-b border-gray-200 p-6">
+            <div className="border-b border-gray-200 p-6 text-center">
               <h2 className="text-2xl font-bold text-gray-900">Contact Us</h2>
             </div>
             <div className="p-6">
@@ -58,6 +57,19 @@ export const ContactUs = ({ position }) => {
                     name="user_phone"
                     className="w-full rounded-md border border-gray-300 p-2 focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
                   />
+                </div>
+                <div className="space-y-2">
+                  <label className="block text-sm font-medium text-gray-700">Service Required</label>
+                  <select
+                    name="service_required"
+                    className="w-full rounded-md border border-gray-300 p-2 focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
+                  >
+                    <option value="IRS Representation">IRS Representation</option>
+                    <option value="Bookkeeping">Bookkeeping</option>
+                    <option value="Personal Taxes">Personal Taxes</option>
+                    <option value="Business Taxes">Business Taxes</option>
+                    <option value="Incorporation Services">Incorporation Services</option>
+                  </select>
                 </div>
                 <div className="space-y-2">
                   <label className="block text-sm font-medium text-gray-700">Message</label>

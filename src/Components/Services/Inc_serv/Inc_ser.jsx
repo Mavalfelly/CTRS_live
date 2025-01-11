@@ -1,4 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
+import Cuds from "../../Contact Us/ContactButton";
 import PageHeader from "../../PageHeader/PageHeader";
 
 
@@ -10,7 +11,7 @@ const IncPage = () => {
             backgroundImage='/jax_back2.jpeg'
             overlayOpacity='bg-black/40'
         />
-        <div className="max-w-4xl mx-auto p-6">
+        <div className="max-w-4xl mb-10 mx-auto p-6">
           <div className="space-y-8">
             <div>
               <h1 className="text-4xl font-bold mb-4 text-gray-900">
@@ -55,6 +56,7 @@ const IncPage = () => {
             </div>
           </div>
         </div>
+        <Cuds/>
       </>
     );
   };

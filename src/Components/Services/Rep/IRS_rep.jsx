@@ -1,4 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
+import Cuds from "../../Contact Us/ContactButton";
 import PageHeader from "../../PageHeader/PageHeader";
 const IRSPage = () => {
     return (
@@ -8,7 +9,7 @@ const IRSPage = () => {
             backgroundImage='/Jax_back1.jpg'
             overlayOpacity='bg-black/40'
         />
-        <div className="max-w-4xl mb-20 mx-auto p-6">
+        <div className="max-w-4xl mb-10 mx-auto p-6">
           <div className="space-y-8">
             <div>
               <h1 className="text-4xl font-bold mb-4 text-gray-900">
@@ -62,6 +63,7 @@ const IRSPage = () => {
             </div>
           </div>
         </div>
+        <Cuds/>
       </>  
       );
   };

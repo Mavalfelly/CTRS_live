@@ -27,9 +27,9 @@ const Landing = () => {
             {/* Hero Content */}
             <div className="relative z-20 text-center text-white px-4 max-w-4xl mx-auto">
             <h1 className="text-5xl font-bold mb-6 leading-tight tracking-tight drop-shadow-lg">
-                Welcome to College Tax and Retirement Stratagies
+                Welcome to College, Tax & Retirement Stratagies, LLC
               </h1>
-              <h1 className="text-3xl font-bold mb-6 leading-tight tracking-tight drop-shadow-lg">
+              <h1 className="text-4xl font-bold mb-6 text-blue-400 leading-tight tracking-tight drop-shadow-lg">
                 Jacksonville's Best Tax Preperation and Bookkeeping Firm
               </h1>
               <h2 className="text-3xl font-medium mb-4 drop-shadow-lg bg-black/30 inline-block px-6 py-2 rounded-full">

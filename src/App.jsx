@@ -12,13 +12,14 @@ import BookkeepingPage from './Components/Services/Bookkeeping/Bookkepping.jsx'
 import IncPage from './Components/Services/Inc_serv/Inc_ser.jsx'
 import IRSPage from './Components/Services/Rep/IRS_rep.jsx'
 import '@fortawesome/fontawesome-free/css/all.min.css';
-
+import ScrollToTop from './Components/Scroller/Scroller.jsx'
 
 function App() {
 
   return (
     <>
       <BrowserRouter>
+        <ScrollToTop/>
         <NavBar/>
         <Routes>
           <Route path='/' element={<Landing/>} />

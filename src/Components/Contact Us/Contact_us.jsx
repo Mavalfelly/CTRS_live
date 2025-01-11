@@ -1,56 +1,82 @@
+/* eslint-disable react/no-unescaped-entities */
 import { ContactUs } from '../Email/Email';
-import './cont.css'
+import PageHeader from '../PageHeader/PageHeader';
 
-const ContactPage = () => {
-  return (
-    <div className="max-w-3xl mx-auto px-4 py-8">
-      {/* Header Section */}
-      <h1 id='title' className=" font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-blue-400 mb-12 text-center tracking-tight">
-        College Tax and Retirement Strategies, LLC
-      </h1>
-      
-      {/* Contact Information Section */}
-      <div className="mb-12 text-center space-y-8">
-        {/* Location */}
-        <div className="space-y-4 transform hover:scale-105 transition-transform duration-300">
-          <h2 className="text-3xl font-bold text-gray-800 border-b-2 border-blue-500 inline-block pb-2">
-            Come See Us!
-          </h2>
-          <div className="bg-gradient-to-r from-white to-gray-50 p-4 rounded-lg shadow-md">
-            <p className="text-xl text-gray-700 font-medium">3110 Spring Glenn Rd</p>
-            <p className="text-xl text-gray-700 font-medium">Jacksonville, FL 32207</p>
-          </div>
-        </div>
+const About = () => {
+    return (
+        <div className='bg-gradient-to-b from-blue-50 to-white'>
+            <PageHeader
+                title='About Us'
+                backgroundImage='/Jax_back1.jpg'
+                overlayOpacity='bg-black/40'
+            />
+            <div className="max-w-4xl mx-auto px-6 py-12">
+                {/* Company Name */}
+                <h1 className="text-3xl font-bold text-gray-800 mb-8 text-center">
+                    College Tax and Retirement Strategies, LLC
+                </h1>
 
-        {/* Contact Numbers */}
-        <div className="space-y-4 flex flex-col items-center">
-          <div className="flex items-center space-x-3 text-xl transform hover:scale-105 transition-transform duration-300">
-            <span className="text-red-500 text-2xl">📞</span>
-            <a 
-              href="tel:(904) 396-6777" 
-              className="text-gray-700 hover:text-blue-600 transition-colors font-semibold underline decoration-blue-400 decoration-2 underline-offset-4"
-            >
-              (904) 396-6777
-            </a>
-          </div>
-          <div className="flex items-center space-x-3 text-xl transform hover:scale-105 transition-transform duration-300">
-            <span className="text-red-500 text-2xl">📠</span>
-            <span className="text-gray-700 font-semibold">(904) 725-9980</span>
-          </div>
-        </div>
-      </div>
+                <div className="space-y-16">
+                    {/* Welcome Section */}
+                    <section className="text-center">
+                        <h2 className="text-2xl font-semibold text-gray-700 mb-6">
+                            Welcome to CTRS
+                        </h2>
+                        <p className="text-gray-600 text-lg">
+                            For <span className="text-blue-600">more than 27 years</span>, 
+                            Lyuba and her dedicated team have proudly served the Jacksonville community 
+                            with expert accounting and tax preparation services. With a commitment to 
+                            <span className="text-blue-600"> accuracy, professionalism, and personalized care</span>, 
+                            we handle everything from simple tax filings to intricate financial matters. 
+                            No matter how straightforward or complex your needs may be, you can trust us 
+                            to provide reliable solutions tailored to your unique situation.
+                        </p>
+                    </section>
 
-      {/* Contact Form Section */}
-      <div className="space-y-8 ">
-        <h2 className="text-3xl font-bold text-center ml-52 text-gray-800 border-b-2 border-blue-500 inline-block pb-2 px-4 transform hover:scale-105 transition-transform duration-300">
-          Send Us a Message
-        </h2>
-        <div className="flex justify-center">
-          <ContactUs position="center" />
+                    {/* Why Choose Us Section */}
+                    <section className="text-center">
+                        <h2 className="text-2xl font-semibold text-gray-700 mb-6">
+                            Why Choose Us
+                        </h2>
+                        <p className="text-gray-600 text-lg">
+                            Our mission is to provide <span className="text-blue-600">reliable, high-quality</span> accounting 
+                            and tax services that empower our clients to achieve financial success and peace of mind. 
+                            With a focus on <span className="text-blue-600">expertise, personalized support, 
+                            and meticulous attention to detail</span>, we are dedicated to managing your finances 
+                            with care and precision. Partner with us for a brighter financial future.
+                        </p>
+                    </section>
+
+                    {/* Let's Work Together Section */}
+                    <section className="text-center">
+                        <h2 className="text-2xl font-semibold text-gray-700 mb-6">
+                            Let's Work Together
+                        </h2>
+                        <p className="text-gray-600 text-lg">
+                            Reach out to us today by calling{' '}
+                            <a 
+                                href="tel:+19043696777" 
+                                className="text-blue-600 hover:text-blue-800 transition-colors"
+                            >
+                                (904) 396-6777
+                            </a>
+                            {' '}or filling out the contact form below. We're eager to assist you, resolve 
+                            your challenges, and guide you toward achieving your goals. Let's work together 
+                            to create a successful future.
+                        </p>
+                    </section>
+
+                    {/* Contact Form Section */}
+                    <section>
+                        <h2 className="text-2xl font-semibold text-gray-700 mb-8 text-center">
+                            Get in Touch
+                        </h2>
+                        <ContactUs position="center" />
+                    </section>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  );
+    );
 };
 
-export default ContactPage;
+export default About;
