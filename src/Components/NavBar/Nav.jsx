@@ -1,10 +1,11 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
-import { Menu, X, ChevronDown } from "lucide-react";
+import { Menu, X, ChevronDown, ChevronRight } from "lucide-react";
 
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [isMobileServicesOpen, setIsMobileServicesOpen] = useState(false);
 
   let dropdownTimeout;
 
@@ -18,7 +19,7 @@ const NavBar = () => {
               <img 
                 src="/logo.png" 
                 alt="Company Logo" 
-                className="h-36 flex justify-center" // Adjust size as needed
+                className="h-36 flex justify-center"
               />
             </Link>
           </div>
@@ -82,7 +83,7 @@ const NavBar = () => {
                       to="/inc_services"
                       className="block px-4 py-2 text-m text-gray-700 hover:bg-gray-100 transition-colors"
                     >
-                      Incorperation Services
+                      Incorporation Services
                     </Link>
                   </div>
                   <div className="py-1">
@@ -94,7 +95,6 @@ const NavBar = () => {
                     </Link>
                   </div>
                 </div>
-                
               )}
             </div>
             <Link to="/resources" className="text-gray-600 hover:text-gray-900 px-3 py-2 text-m font-medium transition-colors">
@@ -137,41 +137,45 @@ const NavBar = () => {
           </Link>
           {/* Mobile Services Menu */}
           <div>
-            <div
-              className="block px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-50 transition-colors"
+            <button
+              onClick={() => setIsMobileServicesOpen(!isMobileServicesOpen)}
+              className="flex items-center w-full px-3 py-2 rounded-md text-base font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-50 transition-colors"
             >
               Services
+              <ChevronRight className={`ml-2 h-4 w-4 transform transition-transform ${isMobileServicesOpen ? 'rotate-90' : ''}`} />
+            </button>
+            <div className={`${isMobileServicesOpen ? 'block' : 'hidden'} space-y-1`}>
+              <Link
+                to="/personal_taxes"
+                className="block px-3 py-2 pl-6 rounded-md text-base font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-50 transition-colors"
+              >
+                - Personal Taxes
+              </Link>
+              <Link
+                to="/business_taxes"
+                className="block px-3 py-2 pl-6 rounded-md text-base font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-50 transition-colors"
+              >
+                - Business Taxes
+              </Link>
+              <Link
+                to="/bookkeeping"
+                className="block px-3 py-2 pl-6 rounded-md text-base font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-50 transition-colors"
+              >
+                - Bookkeeping
+              </Link>
+              <Link
+                to="/inc_services"
+                className="block px-3 py-2 pl-6 rounded-md text-base font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-50 transition-colors"
+              >
+                - Incorporation Services
+              </Link>
+              <Link
+                to="/irs_rep"
+                className="block px-3 py-2 pl-6 rounded-md text-base font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-50 transition-colors"
+              >
+                - IRS Representation
+              </Link>
             </div>
-            <Link
-              to="/personal_taxes"
-              className="block px-3 py-2 pl-6 rounded-md text-base font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-50 transition-colors"
-            >
-              - Personal Taxes
-            </Link>
-            <Link
-              to="/business_taxes"
-              className="block px-3 py-2 pl-6 rounded-md text-base font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-50 transition-colors"
-            >
-              - Business Taxes
-            </Link>
-            <Link
-              to="/bookkeeping"
-              className="block px-3 py-2 pl-6 rounded-md text-base font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-50 transition-colors"
-            >
-              - Bookkeeping
-            </Link>
-            <Link
-              to="/inc_services"
-              className="block px-3 py-2 pl-6 rounded-md text-base font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-50 transition-colors"
-            >
-              - Incorperation Services
-            </Link>
-            <Link
-              to="/irs_rep"
-              className="block px-3 py-2 pl-6 rounded-md text-base font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-50 transition-colors"
-            >
-              - IRS Representation
-            </Link>
           </div>
           <Link
             to="/resources"
