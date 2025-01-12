@@ -49,7 +49,7 @@ const ContactPage = () => {
                 </a>
                 <div className="flex items-center justify-center text-gray-600">
                   <span className="mr-2">📠</span>
-                  (904) 725-9980
+                  (904) 396-6754
                 </div>
               </div>
             </div>
