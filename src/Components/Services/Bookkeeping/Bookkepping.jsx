@@ -10,8 +10,8 @@ const BookkeepingPage = () => {
             backgroundImage='/Jax_back1.jpg'
             overlayOpacity='bg-black/40'
         />
-        <div className="max-w-4xl mb-10 mx-auto p-6">
-          <div className="space-y-8">
+        <div className="max-w-4xl mb-6 mx-auto p-6">
+          <div className="space-y-8 mb-10">
             <div>
               <h1 className="text-4xl font-bold mb-4 text-gray-900">
                   Reliable Bookkeeping Services for All Business Owners
@@ -54,8 +54,8 @@ const BookkeepingPage = () => {
               </p>
             </div>
           </div>
+          <Cuds/>
         </div>
-        <Cuds/>
       </>
     );
   };

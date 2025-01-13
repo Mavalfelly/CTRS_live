@@ -11,8 +11,8 @@ const BusinessTaxesPage = () => {
             backgroundImage='/jax_back2.jpeg'
             overlayOpacity='bg-black/40'
         />
-      <div className="max-w-4xl mb-10 mx-auto p-6">
-        <div className="space-y-8">
+      <div className="max-w-4xl mb-6 mx-auto p-6">
+        <div className="space-y-8 mb-10">
           <div>
             <h1 className="text-4xl font-bold mb-4 text-gray-900">
               We Help Local Businesses Solve Tax Problems & Plan for The Future.
@@ -57,8 +57,8 @@ const BusinessTaxesPage = () => {
             </p>
           </div>
         </div>
+        <Cuds/>
       </div>
-      <Cuds/>
     </>
   );
 };

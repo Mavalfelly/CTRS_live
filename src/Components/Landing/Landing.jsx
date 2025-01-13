@@ -1,6 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
-
 import { Link } from "react-router-dom";
+import Cuds from "../Contact Us/ContactButton";
 
 const Landing = () => {
     return (
@@ -50,7 +50,7 @@ const Landing = () => {
           </div>
 
           {/* Rest of the content */}
-          <div className="bg-gray-100">
+          <div className="bg-gray-100 pb-6">
             {/* Mission Statement */}
             <section
               id="Mission"
@@ -75,7 +75,7 @@ const Landing = () => {
 
             {/* Services Section */}
             <section id="servs" className="py-12">
-              <div className="max-w-7xl mx-auto px-6">
+              <div className="max-w-7xl mx-auto  px-6">
                 <h2 className="text-3xl font-bold text-center mb-8 text-blue-800">
                   Our Services
                 </h2>
@@ -158,6 +158,7 @@ const Landing = () => {
                 </div>
               </div>
             </section>
+            <Cuds/>
           </div>
         </>
     );
