@@ -1,11 +1,13 @@
 /* eslint-disable react/prop-types */
-import { useRef, useState} from 'react';
+import { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
+import { Loader2 } from 'lucide-react';
 
-export const ContactUs = ({ position }) => {
+export const ContactUs = ({ position = 'center' }) => {
   const form = useRef();
   const [status, setStatus] = useState({ type: '', message: '' });
   const [errors, setErrors] = useState({});
+  const [isLoading, setIsLoading] = useState(false);
   const [formData, setFormData] = useState({
     user_name: '',
     user_email: '',
@@ -72,6 +74,8 @@ export const ContactUs = ({ position }) => {
       return;
     }
 
+    setIsLoading(true);
+
     try {
       await emailjs.sendForm(
         import.meta.env.VITE_SERV,
@@ -102,6 +106,8 @@ export const ContactUs = ({ position }) => {
         message: 'Oops! Something went wrong. Please try again later or give us a call at (904) 396-6777.'
       });
       console.error('Failed to send email:', error);
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -146,6 +152,7 @@ export const ContactUs = ({ position }) => {
                   name="user_name"
                   value={formData.user_name}
                   onChange={handleChange}
+                  disabled={isLoading}
                   className={inputClasses('user_name')}
                 />
                 {errors.user_name && (
@@ -161,6 +168,7 @@ export const ContactUs = ({ position }) => {
                   name="user_email"
                   value={formData.user_email}
                   onChange={handleChange}
+                  disabled={isLoading}
                   className={inputClasses('user_email')}
                 />
                 {errors.user_email && (
@@ -176,6 +184,7 @@ export const ContactUs = ({ position }) => {
                   name="user_phone"
                   value={formData.user_phone}
                   onChange={handleChange}
+                  disabled={isLoading}
                   className={inputClasses('user_phone')}
                 />
                 {errors.user_phone && (
@@ -190,6 +199,7 @@ export const ContactUs = ({ position }) => {
                   name="service_required"
                   value={formData.service_required}
                   onChange={handleChange}
+                  disabled={isLoading}
                   className={inputClasses('service_required')}
                 >
                   <option value="">Select a service</option>
@@ -212,6 +222,7 @@ export const ContactUs = ({ position }) => {
                   rows="4"
                   value={formData.message}
                   onChange={handleChange}
+                  disabled={isLoading}
                   className={inputClasses('message')}
                 />
                 {errors.message && (
@@ -220,9 +231,17 @@ export const ContactUs = ({ position }) => {
               </div>
               <button
                 type="submit"
-                className="w-full rounded-md bg-blue-600 px-4 py-2 text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+                disabled={isLoading}
+                className="w-full rounded-md bg-blue-600 px-4 py-2 text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
               >
-                Send Message
+                {isLoading ? (
+                  <>
+                    <Loader2 className="animate-spin mr-2 h-4 w-4" />
+                    Sending...
+                  </>
+                ) : (
+                  'Send Message'
+                )}
               </button>
             </form>
           </div>
