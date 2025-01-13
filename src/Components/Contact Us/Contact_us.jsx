@@ -10,7 +10,7 @@ const ContactPage = () => {
         backgroundImage='/jax_back2.jpeg'
         overlayOpacity='bg-black/40'
       />
-      <div className="max-w-4xl mx-auto px-6 py-12">
+      <div className="max-w-4xl  mx-auto px-6 py-12">
         {/* Company Name */}
         <h1 className="text-3xl font-bold text-gray-800 mb-8 text-center">
           College Tax and Retirement Strategies, LLC

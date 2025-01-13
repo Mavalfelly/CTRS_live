@@ -10,16 +10,16 @@ const NavBar = () => {
   let dropdownTimeout;
 
   return (
-    <nav className="bg-white shadow-md relative z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <nav className="bg-white shadow-md h-20 relative z-50">
+      <div className="max-w-7xl mx-auto px-4 pt-3 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           {/* Logo/Brand section */}
           <div className="flex items-center">
             <Link to="/">
               <img 
-                src="/logo.png" 
+                src="/ctrs2.png" 
                 alt="Company Logo" 
-                className="h-36 flex justify-center"
+                className="h-52 min-w-52 flex justify-center"
               />
             </Link>
           </div>
