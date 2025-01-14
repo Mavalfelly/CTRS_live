@@ -1,32 +1,55 @@
 /* eslint-disable react/no-unescaped-entities */
 import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
 import Cuds from "../Contact Us/ContactButton";
 
 const Landing = () => {
+    const [isVideoLoaded, setIsVideoLoaded] = useState(false);
+
+    useEffect(() => {
+        // Preload the video
+        const video = document.createElement('video');
+        video.preload = "auto";
+        video.src = "/jaxVid.mp4";
+        
+        // Listen for when video is loaded
+        video.onloadeddata = () => {
+            setIsVideoLoaded(true);
+        };
+    }, []);
+
     return (
         <>
          {/* Hero Section with Video Background */}
-         <div
-            className="relative flex flex-col items-center justify-center h-screen"
-          >
-            {/* Video Background - Added brightness filter */}
+         <div className="relative flex flex-col items-center justify-center h-screen">
+            {/* Video Background with preload attribute */}
             <video 
               autoPlay 
               loop 
               muted 
               playsInline
-              className="absolute top-0 left-0 w-full h-full object-cover z-0 brightness-75"
+              preload="auto"
+              className={`absolute top-0 left-0 w-full h-full object-cover z-0 brightness-75 transition-opacity duration-300 ${
+                isVideoLoaded ? 'opacity-100' : 'opacity-0'
+              }`}
+              onLoadedData={() => setIsVideoLoaded(true)}
             >
               <source src="/jaxVid.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
 
+            {/* Fallback background color while video loads */}
+            <div className={`absolute top-0 left-0 w-full h-full bg-gray-800 transition-opacity duration-300 ${
+              isVideoLoaded ? 'opacity-0' : 'opacity-100'
+            }`}></div>
+
+            {/* Rest of your component remains the same */}
             {/* Darker Overlay */}
             <div className="absolute top-0 left-0 w-full h-full bg-black/60 z-10"></div>
 
             {/* Hero Content */}
             <div className="relative z-20 text-center text-white px-4 max-w-4xl mx-auto">
-            <h1 className="text-5xl font-bold mb-6 leading-tight tracking-tight drop-shadow-lg">
+              <h1 className="text-5xl font-bold mb-6 leading-tight tracking-tight drop-shadow-lg">
                 Welcome to College, Tax & Retirement Stratagies, LLC
               </h1>
               <h1 className="text-4xl font-bold mb-6 text-blue-400 leading-tight tracking-tight drop-shadow-lg">
