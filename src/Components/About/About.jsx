@@ -4,7 +4,7 @@ import PageHeader from '../PageHeader/PageHeader';
 
 const About = () => {
     return (
-        <div className='bg-gradient-to-b from-blue-50 to-white'>
+        <div className='jj'>
             <PageHeader
                 title='About Us'
                 backgroundImage='/Jax_back1.jpg'
